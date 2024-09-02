@@ -143,8 +143,18 @@
     gap: 0.2rem;
   }
 
+  main:nth-child(4) > section > h1 {
+    margin: 3rem 0 2rem;
+    font-size: 1.7rem;
+  }
+
+  main:nth-child(4) > section > figure > div > h2 {
+    font-size: 0.8rem;
+  }
+
   main:nth-child(4) > section > figure > div > p {
-    font-size: 0.6rem;
+    font-weight: lighter;
+    font-size: 0.7rem;
   }
 
 
