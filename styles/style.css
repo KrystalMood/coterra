@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media screen and (max-width: 8192px) {
   * {
     opacity: 0;
@@ -157,7 +161,19 @@
     font-size: 0.7rem;
   }
 
+  main:nth-child(5) > section > h1 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  main:nth-child(5) > section > div > h2 {
+    font-size: 0.8rem;
+  }
 
+  main:nth-child(5) > section > div > p {
+    font-weight: lighter;
+    font-size: 0.7rem;
+  }
 }
 
 
