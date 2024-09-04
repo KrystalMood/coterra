@@ -1,204 +1,187 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-p-10">
+  <!-- prettier-ignore -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-    />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beranda</title>
+    <title>Home | Coterra</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script type="text/javascript" src="script.js"></script>
   </head>
-  <body
-    class="overflow-x-hidden bg-gradient-to-tr from-[#0b0c1e] to-[#141414] text-slate-50"
-  >
-    <header class="mx-auto flex h-fit w-4/5 justify-between py-10">
-      <section>
-        <img src="" alt=""/> <span class="text-4xl font-bold">Coterra</span>
-      </section>
-      <nav class="text-1xl mt-3">
-        <a href="about-us.html" class="mx-4">About Us</a>
-        <a href="blog.html" class="mx-4">Blog</a>
-        <a href="services.html" class="mx-4">Services</a>
-        <a
-          href="get-started.html"
-          class="mx-4 rounded-md bg-slate-50 px-5 py-3 text-slate-950 transition-all duration-300 ease-in-out hover:bg-slate-200"
-          >Get Started</a
-        >
+  <body class="overflow-x-hidden bg-gradient-to-tr from-[#0b0c1e] to-[#141414]">
+    <!-- prettier-ignore -->
+    <header class="mx-auto flex w-4/5 items-center justify-between py-10 text-slate-50">
+			<a href="/" class="h-fit w-fit">
+				<img src="" alt="Logo" />
+			</a>
+			<nav class="hidden flex-1 items-center justify-end text-xl lg:flex">
+        <a href="about-us.html"
+          class="mr-14 transition-all duration-300 ease-in-out hover:text-slate-300 hover:underline hover:decoration-from-font">
+          About Us
+        </a>
+        <a href="blog.html" class="mr-14 transition-all duration-300 ease-in-out hover:text-slate-300 hover:underline hover:decoration-from-font">
+          Blog
+        </a>
+        <a href="services.html" class="mr-14 transition-all duration-300 ease-in-out hover:text-slate-300 hover:underline hover:decoration-from-font">
+          Services
+        </a>
+        <a href="get-started.html" class="rounded-md bg-slate-50 px-5 py-3 text-slate-950 transition-all duration-300 ease-in-out hover:bg-slate-200">
+          Get Started
+        </a>
       </nav>
+			<i class="fa fa-bars flex cursor-pointer text-2xl lg:hidden"></i>
     </header>
+    <main class="mx-auto mt-40 flex w-4/5 flex-col">
+      <!-- Hero -->
+       <!-- prettier-ignore -->
+      <section class="flex h-fit w-full flex-col-reverse items-center justify-between text-slate-50 lg:flex-row">
+        <div class="mt-10 flex flex-col lg:mt-0 lg:flex-1">
+          <h1 class="hidden cursor-default text-justify text-6xl font-bold lg:inline">
+            Unleash Your <span id="typed-home-hero"></span><br class="hidden lg:inline" />
+            in <span class="text-red-800">Coterra</span>
+          </h1>
+          <h1 class="inline cursor-default text-center text-6xl font-bold lg:hidden">
+            Unleash Your Creativity in <span class="text-red-800">Coterra</span>
+          </h1>
+          <h4 class="mt-7 cursor-default text-justify text-2xl [text-align-last:center] lg:mt-4 lg:[text-align-last:left]">
+            Express Your Potential, Connect with the World
+            <br class="hidden lg:inline" />
+            Empowering Every Creator's Vision.
+          </h4>
+          <button id="get-started" class="mx-auto mt-10 h-fit w-fit rounded-md bg-red-800 px-8 py-4 text-xl font-semibold transition-all duration-300 ease-in-out [box-shadow:_0.3rem_0.3rem_0_#991b1b99] hover:bg-red-700 lg:mx-0 lg:mt-8">
+            Get Started
+          </button>
+        </div>
+        <img src="" alt="Hero" />
+      </section>
 
-    <!-- Hero Section -->
-    <main class="mx-auto mt-36 flex w-4/5 justify-between">
-      <section>
-        <h1 class="text-6xl font-bold" 1>
-          Unleash Your Creativity <br />
-          in The <span style="color: brown;">Coterra</span>
-        </h1>
-        <h6 class="mt-4 font-light text-xl"> Unleash Your Potential, Connect with the World</h6>
-        <h6 class=" font-light text-xl">Empowering Every Creator's Vision.</h6>
-        <div class="mt-4">
-          <button type="button" class="bg-red-900 px-4 py-2 mr-2 rounded-xl">Get Started</button>
-          <button type="button" class="border px-4 py-2 rounded-xl">Learn More</button>
+      <!-- Dive Into the Process -->
+      <!-- prettier-ignore -->
+      <section id="dive-into-the-process" class="mt-32 flex h-fit w-full cursor-default flex-col text-slate-50">
+        <span class="absolute left-0 top-0 z-0 h-40 w-40 bg-red-800 [filter:blur(7rem)]"></span>
+        <div class="flex items-center">
+          <hr class="hidden h-0.5 w-1/4 lg:inline" />
+          <h3 class="flex-1 cursor-default text-center text-4xl font-bold">
+            Dive Into the Process
+          </h3>
+          <hr class="hidden h-0.5 w-1/4 lg:inline" />
+        </div>
+        <div class="mt-10 grid w-full grid-cols-1 text-justify sm:grid-cols-2 xl:grid-cols-3">
+          <span class="flex flex-col p-8">
+            <i class="fa-solid fa-user text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Create an account</h4>
+            <h5 class="mt-2">
+              Sign up by providing your basic information or connect via social
+              media. This will give you access to the platform’s features.
+            </h5>
+          </span>
+          <span class="flex flex-col bg-red-800 p-8">
+            <i class="fa-solid fa-lightbulb text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Add your content</h4>
+            <h5 class="mt-2">
+              Upload text, images, or videos directly to the template, and make
+              edits using an easy-to-use editor to fit your style.
+            </h5>
+          </span>
+          <span class="flex flex-col bg-transparent p-8 sm:bg-red-800 xl:bg-transparent">
+            <i class="fa-solid fa-pen-nib text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Costumize Design</h4>
+            <h5 class="mt-2">
+              Personalize your content’s appearance by adjusting fonts, colors,
+              and layouts to match your brand or theme.
+            </h5>
+          </span>
+          <span class="flex flex-col bg-red-800 p-8 sm:bg-transparent xl:bg-red-800">
+            <i class="fa-solid fa-pen-nib text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Costumize Design</h4>
+            <h5 class="mt-2">
+              Personalize your content’s appearance by adjusting fonts, colors,
+              and layouts to match your brand or theme.
+            </h5>
+          </span>
+          <span class="flex flex-col p-8">
+            <i class="fa-solid fa-comments text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Review and Refine</h4>
+            <h5 class="mt-2">
+              Review your content using the preview mode and optimize it for
+              different platforms (web, mobile, etc.) to ensure it looks perfect
+              everywhere.
+            </h5>
+          </span>
+          <span class="flex flex-col bg-red-800 p-8">
+            <i class="fa fa-upload text-3xl"></i>
+            <h4 class="mt-4 text-3xl font-bold">Publish and Share</h4>
+            <h5 class="mt-2">
+              Once you're satisfied, hit publish! Share your content directly on
+              social media or other platforms with integrated sharing options.
+            </h5>
+          </span>
         </div>
       </section>
-      <section>
-        <img src="" alt="" />
+
+      <!-- Plans -->
+      <section class="mb-14 mt-32 flex items-center gap-x-14 text-slate-50">
+        <div
+          class="flex h-full w-2/3 flex-col items-start justify-center text-justify"
+        >
+          <h3 class="cursor-default text-center text-4xl font-bold">Plans</h3>
+          <h5 class="mt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+            rem laudantium beatae sequi modi provident, omnis vel expedita
+            inventore alias eaque quasi quas earum, quisquam recusandae error
+            consectetur! Nesciunt, itaque.
+          </h5>
+        </div>
+        <section id="karosel-1" class="splide mt-8 h-full w-1/3 overflow-x-hidden">
+          <div class="splide__track h-full w-full">
+            <ul class="splide__list">
+              <figure class="splide__slide flex h-full w-full rounded-lg bg-red-800 px-7 py-4">
+                <span class="mx-auto h-full w-[95%] flex-col items-center">
+                  <h4 class="text-center text-xl font-semibold">
+                    Essential Creator
+                  </h4>
+                  <hr class="mt-1 h-0.5 w-full" />
+                  <h4 class="text-justify text-xl">
+                    <!-- Kasih deskripsi terserah Anda -->
+                  </h4>
+                </span>
+              </figure>
+              <figure class="splide__slide flex h-full w-full rounded-lg bg-red-800 px-7 py-4">
+                <span class="mx-auto h-full w-[95%] flex-col items-center">
+                  <h4 class="text-center text-xl font-semibold">
+                    Premium Creator
+                  </h4>
+                  <hr class="mt-1 h-0.5 w-full" />
+                  <h4 class="text-justify text-xl">
+                    <!-- Kasih deskripsi terserah Anda -->
+                  </h4>
+                </span>
+              </figure>
+              <figure class="splide__slide flex h-full w-full rounded-lg bg-red-800 px-7 py-4">
+                <span class="mx-auto h-full w-[95%] flex-col items-center">
+                  <h4 class="text-center text-xl font-semibold">
+                    Elite Creator
+                  </h4>
+                  <hr class="mt-1 h-0.5 w-full" />
+                  <h4 class="text-justify text-xl">
+                    <!-- Kasih deskripsi terserah Anda -->
+                  </h4>
+                </span>
+              </figure>
+            </ul>
+          </div>
+        </section>
       </section>
     </main>
-
-    <!-- Feature/How it works -->
-    <main class="mx-auto w-4/5 mt-80">
-      <section>
-        <h2 class="mb-20 text-5xl flex justify-center font-bold">
-          Dive into the Process
-        </h2>
-      </section>
-      <figure class="flex justify-between mb-5">
-        <section class="grid grid-cols-3">
-            <div class="p-10">
-              <h3 class="text-3xl mb-1 font-bold">
-                Create an Account
-              </h3>
-              <p class="w-80">Sign up by providing your basic information or connect via social media. This will give you access to the platform’s features.</p>  
-            </div>
-
-            <div class="bg-red-900 p-10 text-center">
-              <h3 class="text-3xl mb-1 font-bold">
-                Add Your Content
-              </h3>
-              <p class="w-80">Upload text, images, or videos directly to the template, and make edits using an easy-to-use editor to fit your style.</p>
-            </div>
-
-            <div class="p-10 text-right">
-              <h3 class="text-3xl mb-1 font-bold">
-                Costumize Design
-              </h3>
-              <p class="w-80">Personalize your content’s appearance by adjusting fonts, colors, and layouts to match your brand or theme.</p>
-            </div>
-
-            <div class="bg-red-900 p-10">
-              <h3 class="text-3xl mb-1 font-bold">
-                Costumize Design
-              </h3>
-              <p class="w-80">Personalize your content’s appearance by adjusting fonts, colors, and layouts to match your brand or theme.</p>
-            </div>
-            
-              <div class=" p-10 text-center">
-                <h3 class="text-3xl mb-1 font-bold">
-                  Review and Refine
-                </h3>
-                <p class="w-80">Review your content using the preview mode and optimize it for different platforms (web, mobile, etc.) to ensure it looks perfect everywhere.</p>
-              </div>
-
-            <div class="bg-red-900 p-10 text-right">
-              <h3 class="text-3xl mb-1 font-bold">
-                Publish and Share
-              </h3>
-              <p class="w-80">Once you're satisfied, hit publish! Share your content directly on social media or other platforms with integrated sharing options.</p>
-            </div>
-      </figure>
-      </section>
-    </main>
-
-    <!-- Testimonials -->
-    <main class="mx-auto mt-64 w-4/5">
-      <h2 class="mb-12 flex justify-center text-5xl">Customer Success Story</h2>
-      <section class="flex content-between">
-        <div class="mr-24">
-          <figure class="mb-5 flex  p-4 bg-red-900 rounded-xl">
-            <div>
-              <p class="font-light">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolores in doloribus voluptatem eveniet quisquam nostrum
-                provident molestiae nisi, autem totam vel, et, necessitatibus
-                vero officia dicta? Porro corporis dolor alias.e
-              </p>
-              <h6>- Amanda, Digital Illustrator</h6>
-            </div>
-            <img src="" alt="gmbr" />
-          </figure>
-          <figure class="mb-5 flex  p-4 bg-red-900 rounded-xl">
-            <div>
-              <p class="font-light">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Dolores in doloribus voluptatem eveniet quisquam nostrum
-                provident molestiae nisi, autem totam vel, et, necessitatibus
-                vero officia dicta? Porro corporis dolor alias.e
-              </p>
-              <h6>- Amanda, Digital Illustrator</h6>
-            </div>
-            <img src="" alt="gmbr" />
-          </figure>
-        </div>
-        <div>
-          <figure class="mb-5 flex  p-4 bg-red-900 rounded-xl">
-            <div>
-              <p class="font-light">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-                in doloribus voluptatem eveniet quisquam nostrum provident
-                molestiae nisi, autem totam vel, et, necessitatibus vero officia
-                dicta? Porro corporis dolor alias.e
-              </p>
-              <h6>- Amanda, Digital Illustrator</h6>
-            </div>
-            <img src="" alt="gmbr">
-          </figure>
-          <figure class="mb-5 flex  p-4 bg-red-900 rounded-xl">
-            <div>
-              <p class="font-light">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores
-                in doloribus voluptatem eveniet quisquam nostrum provident
-                molestiae nisi, autem totam vel, et, necessitatibus vero officia
-                dicta? Porro corporis dolor alias.e
-              </p>
-              <h6>- Amanda, Digital Illustrator</h6>
-            </div>
-            <img src="" alt="gmbr">
-          </figure>
-        </div>
-      </section>
-    </main>
-
-    <!-- Pricing -->
-    <main class="mx-auto w-4/5 mt-80">
-      <section>
-        <div>
-          <h2 class="mb-12 flex justify-center text-5xl font-bold">Plans</h2>
-        </div>
-
-        <figure class="flex justify-center gap-10">
-          <div>
-            <h3 class="bg-red-900">Essential Creator</h3>
-          </div>
-
-          <div>
-            <h3>Premium Creator</h3>
-          </div>
-          
-          <div>
-            <h3>Elite Creator</h3>
-          </div>
-
-        </figure>
-      </section>
-     </main>
-
   </body>
-  <script src="script.js" type="text/javascript"></script>
 </html>
