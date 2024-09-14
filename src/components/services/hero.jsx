@@ -1,11 +1,8 @@
-import React from 'react'
-
-const hero = () => {
+export const ServicesHero = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default hero
+    <main className="">
+      <section className=""></section>
+      <section className=""></section>
+    </main>
+  );
+};

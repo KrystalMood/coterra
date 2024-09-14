@@ -1,7 +1,7 @@
 export const HamburgerMenu = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <section className="flex w-2/5 items-center justify-end lg:hidden">
+      <i className="fa-solid fa-bars cursor-pointer text-2xl" />
+    </section>
+  );
+};

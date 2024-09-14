@@ -1,16 +1,16 @@
 import { WebsiteMeta } from "@/common/website-meta";
 import { ScrollIndicator } from "@/common/scroll-indicator";
 import { Header } from "@/common/header";
-import { BlogHero } from "@/components/blog/hero";
+import { ServicesHero } from "@/components/services/hero";
 import { Footer } from "@/common/footer";
 
-export const BlogPage = () => {
+export const ServicesPage = () => {
   return (
     <>
-      <WebsiteMeta title="Blog | Coterra" description="" />
+      <WebsiteMeta title="Layanan | Coterra" description="" />
       <ScrollIndicator />
       <Header />
-      <BlogHero />
+      <ServicesHero />
       <Footer />
     </>
   );

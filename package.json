@@ -1,5 +1,5 @@
 {
-  "name": "coterrareact",
+  "name": "coterra",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,14 +12,19 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "axios": "^1.7.7",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
+    "react-parallax-tilt": "^1.7.239",
     "react-router-dom": "^6.26.2",
+    "sass": "^1.78.0",
+    "scss": "^0.2.4",
     "typed.js": "^2.1.0",
-    "vite-jsconfig-paths": "^2.0.1"
+    "vite-jsconfig-paths": "^2.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
