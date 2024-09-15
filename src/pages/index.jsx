@@ -4,6 +4,10 @@ import { Header } from "@/common/header";
 import { IndexHero } from "@/components/index/hero";
 import { Features } from "@/components/index/features";
 import { Footer } from "@/common/footer";
+import { WhyUs } from "@/components/index/why-us";
+import { Review } from "@/components/index/review";
+import { DiveInto } from "@/components/index/dive-into";
+import { FaQ } from "@/components/index/faq";
 
 export const IndexPage = () => {
   return (
@@ -12,7 +16,10 @@ export const IndexPage = () => {
       <ScrollIndicator />
       <Header />
       <IndexHero />
+      <WhyUs />
       <Features />
+      <Review />
+      <FaQ />
       <Footer />
     </>
   );

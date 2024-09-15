@@ -13,12 +13,15 @@ export const IndexHero = () => {
     });
 
     return () => TypingEffect.destroy();
-  });
+  }, []);
 
   return (
-    <main className="mx-auto mt-28 flex w-4/5 flex-col">
-      <section className="flex h-fit w-full flex-col-reverse items-center justify-between text-slate-50 lg:flex-row">
-        <div className="mt-10 flex flex-col lg:mt-0 lg:flex-1">
+    <main
+      className="flex flex-col bg-cover bg-center min-h-screen w-full mx-0"
+      style={{ backgroundImage: 'url("../public/template.png")' }}
+    >
+      <section className="flex h-full w-full flex-col-reverse items-center justify-between text-slate-50 lg:flex-row px-8">
+        <div className="mt-10 flex flex-col lg:mt-[18%] lg:ml-[10%] lg:flex-1 ">
           <h1 className="hidden cursor-default text-justify text-6xl font-bold lg:inline">
             Unleash Your <span ref={TypedHero} />
             <br className="hidden lg:inline" />
@@ -42,8 +45,8 @@ export const IndexHero = () => {
           </button>
         </div>
         <img
-          src="/hero-index.png"
-          alt="Hero"
+          src=""
+          alt=""
           className="w-3/5 transition-all duration-300 ease-in-out lg:w-2/5 lg:hover:scale-105"
         />
       </section>
