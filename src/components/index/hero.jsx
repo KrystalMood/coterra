@@ -21,7 +21,7 @@ export const IndexHero = () => {
       style={{ backgroundImage: 'url("../public/template.png")' }}
     >
       <section className="flex h-full w-full flex-col-reverse items-center justify-between text-slate-50 lg:flex-row px-8">
-        <div className="mt-10 flex flex-col lg:mt-[18%] lg:ml-[10%] lg:flex-1 ">
+        <div className="mt-10 flex flex-col lg:mt-[17%] lg:ml-[10%] lg:flex-1 ">
           <h1 className="hidden cursor-default text-justify text-6xl font-bold lg:inline">
             Unleash Your <span ref={TypedHero} />
             <br className="hidden lg:inline" />
