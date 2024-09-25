@@ -16,39 +16,22 @@ export const IndexHero = () => {
   }, []);
 
   return (
-    <main
-      className="flex flex-col bg-cover bg-center min-h-screen w-full mx-0"
-      style={{ backgroundImage: 'url("../public/template.png")' }}
-    >
-      <section className="flex h-full w-full flex-col-reverse items-center justify-between text-slate-50 lg:flex-row px-8">
-        <div className="mt-10 flex flex-col lg:mt-[17%] lg:ml-[10%] lg:flex-1 ">
-          <h1 className="hidden cursor-default text-justify text-6xl font-bold lg:inline">
-            Unleash Your <span ref={TypedHero} />
-            <br className="hidden lg:inline" />
-            in <span className="text-red-800">Coterra</span>
-          </h1>
-          <h1 className="inline cursor-default text-center text-6xl font-bold lg:hidden">
-            Unleash Your Creativity in{" "}
-            <span className="text-red-800">Coterra</span>
-          </h1>
-          <h4 className="mt-7 cursor-default text-justify text-2xl [text-align-last:center] lg:mt-4 lg:[text-align-last:left]">
-            Express Your Potential, Connect with the World
-            <br className="hidden lg:inline" />
-            Empowering Every Creator's Vision.
-          </h4>
-          <button
-            id="get-started"
-            className="mx-auto mt-10 h-fit w-fit rounded-md bg-red-800 px-8 py-5 text-lg font-semibold transition-all duration-300 ease-in-out [box-shadow:_0.3rem_0.3rem_0_#991b1b99] hover:bg-red-700 lg:mx-0 lg:mt-8 lg:hover:scale-105"
-          >
-            Let's Explore&ensp;
-            <i className="fa-solid fa-arrow-right" />
-          </button>
-        </div>
-        <img
-          src=""
-          alt=""
-          className="w-3/5 transition-all duration-300 ease-in-out lg:w-2/5 lg:hover:scale-105"
-        />
+    <main className="mx-auto mt-36 flex h-full w-4/5 flex-col-reverse gap-x-20 text-center lg:flex-row lg:text-left">
+      <section className="mt-10 flex flex-1 cursor-default flex-col text-[#131842] lg:mt-0">
+        <h1 className="text-4xl font-black sm:text-5xl lg:text-6xl">
+          Unleash Your <span ref={TypedHero} />
+          <br />
+          In <span className="text-[#e68369]">Coterra</span>
+        </h1>
+        <br />
+        <h3 className="text-base font-semibold sm:text-lg lg:text-xl">
+          Express Your Potential, Connect with the World
+          <br className="hidden sm:flex" />
+          Empowering Every Creator's Vision.
+        </h3>
+      </section>
+      <section className="">
+        <img src="" alt="Hero" />
       </section>
     </main>
   );
