@@ -9,7 +9,7 @@ export const Header = () => {
       <section className="h-full w-fit py-10">
         <img src="" alt="Logo" />
       </section>
-      <section className="hidden h-full w-fit flex-1 items-center justify-between px-12 py-10 font-semibold text-[#e68369] lg:flex">
+      <section className= "hidden h-full w-fit flex-1 items-center justify-between px-12 py-10 font-semibold text-[#e68369] lg:flex">
         {["Home", "About Us", "Blog", "Plans"].map((menu, index) => {
           const path = menu === "Home" ? "/" : `/${menu.replace(/ /g, "-").toLowerCase()}`;
           const is_active = location.pathname === path;

@@ -8,7 +8,6 @@ import { WhyExist } from "@/components/about-us/whyexist";
 import { Introduction } from "@/components/about-us/introduction";
 import { Team } from "@/components/about-us/team2";
 import { OurMission } from "@/components/about-us/mission";
-import { Mission } from "@/components/about-us/mission2";
 
 export const AboutUsPage = () => {
   return (
@@ -18,7 +17,6 @@ export const AboutUsPage = () => {
       <Header />
       <AboutUsHero />
       <Introduction />
-      <Mission />
       <OurMission />
       <Team/>
       <Footer />
