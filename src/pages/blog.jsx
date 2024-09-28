@@ -3,6 +3,7 @@ import { ScrollIndicator } from "@/common/scroll-indicator";
 import { Header } from "@/common/header";
 import { BlogHero } from "@/components/blog/hero";
 import { Footer } from "@/common/footer";
+import { RelatedPosts } from "@/components/blog/relatedposts";
 
 export const BlogPage = () => {
   return (
@@ -11,6 +12,7 @@ export const BlogPage = () => {
       <ScrollIndicator />
       <Header />
       <BlogHero />
+      <RelatedPosts />
       <Footer />
     </>
   );
