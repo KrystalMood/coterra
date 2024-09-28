@@ -31,7 +31,7 @@ export const IndexHero = () => {
         </h3>
       </section>
       <section className="">
-        <img src="" alt="Hero" />
+        <img src="/heroAboutUs.png" alt="Hero" className="transform scale-x-[-1] h-[30rem]"/>
       </section>
     </main>
   );

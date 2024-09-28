@@ -5,7 +5,7 @@ export const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="mx-auto flex h-full w-4/5 justify-between gap-x-40">
+    <header className="mx-auto flex h-full w-4/5 justify-between gap-x-40 ">
       <section className="h-full w-fit py-10">
         <img src="" alt="Logo" />
       </section>
