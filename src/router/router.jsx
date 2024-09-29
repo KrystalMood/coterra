@@ -7,6 +7,7 @@ import { FAQPage } from "@/pages/faq";
 import { ServicesPage } from "@/pages/services";
 import { RegisterPage } from "@/pages/register";
 import { LoginPage } from "@/pages/login";
+import { PlansPage } from "@/pages/plans";
 
 export const Router = () => {
   return (
@@ -19,6 +20,7 @@ export const Router = () => {
         <Route path="/faq" Component={FAQPage} />
         <Route path="/services" Component={ServicesPage} />
         <Route path="/register" Component={RegisterPage} />
+        <Route path="/plans" Component={PlansPage} />
         <Route path="/login" Component={LoginPage} />
       </Routes>
     </BrowserRouter>
