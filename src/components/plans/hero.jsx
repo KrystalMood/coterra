@@ -29,12 +29,20 @@ export const PlansHero = () => {
             pro-level features, let your creativity soar without limits.
           </p>
           <div>
-            <button className="border-1 mt-4 rounded-xl border border-[#e68369] bg-[#e68369] px-4 py-2 text-white">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-1 mt-4 rounded-xl border border-[#e68369] bg-[#e68369] px-4 py-2 text-white hover:bg-white hover:text-[#e68369] font-semibold transition duration-300 ease-in-out"
+            >
               Explore
-            </button>
-            <button className="border-1 ml-3 mt-4 rounded-xl border border-[#e68369] bg-white px-4 py-2 text-[#e68369]">
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="border-1 ml-3 mt-4 rounded-xl border border-[#e68369] bg-white px-4 py-2 text-[#e68369] hover:bg-[#e68369] hover:text-white font-semibold transition duration-300 ease-in-out"
+            >
               Join Now!
-            </button>
+            </motion.button>
           </div>
         </motion.article>
         <motion.div
