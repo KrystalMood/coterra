@@ -5,6 +5,7 @@ import { IndexHero } from "@/components/index/hero";
 import { ShapeTheFuture } from "@/components/index/shape-the-future";
 import { Reviews } from "@/components/index/reviews";
 import { IndexFeatures } from "@/components/index/features";
+import Footer from "@/common/footer";
 
 export const IndexPage = () => {
   return (
@@ -13,9 +14,10 @@ export const IndexPage = () => {
       <ScrollIndicator />
       <Header />
       <IndexHero />
-      <ShapeTheFuture />
       <IndexFeatures />
+      <ShapeTheFuture />
       <Reviews />
+      <Footer />
     </>
   );
 };

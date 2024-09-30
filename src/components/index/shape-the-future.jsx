@@ -7,7 +7,7 @@ export const ShapeTheFuture = () => {
             Shape the Future of <span className="text-[#e68369]">Creation</span>{" "}
             with Us
           </h1>
-          <p>Watch your creativity blossom into a thriving business</p>
+          <p className="mt-4 text-[#fff5ed] text-xl w-[40%]">Watch your creativity blossom into a thriving business</p>
         </div>
         <img
           src="/shape-the-future.png"
