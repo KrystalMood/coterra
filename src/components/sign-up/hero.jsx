@@ -1,30 +1,42 @@
-import { ArrowLeft } from 'lucide-react';
-import {motion} from 'framer-motion';
+import { ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const SignUpHero = () => {
   return (
-    <main className="min-h-screen">
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0 }}
-      whileHover={{scale: 1.05}}
-      whileTap={{scale: 0.9}}
-      className="absolute left-0 top-0 m-4"
-    >
-      <Link to="/" className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:bg-gray-100 transition-colors duration-300">
-        <ArrowLeft size={24} />
-      </Link>
-    </motion.div>
-      <div className="flex justify-between">
+    <main className="min-h-screen relative bg-gradient-to-br from-orange-50 to-white">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.9 }}
+        className="absolute left-0 top-0 m-4 z-10"
+      >
+        <Link
+          to="/"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md transition-colors duration-300 hover:bg-gray-100"
+        >
+          <ArrowLeft size={24} />
+        </Link>
+      </motion.div>
+      <motion.div
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ delay: 0.2, duration: 0.8 }}
+        className="flex flex-col lg:flex-row justify-between "
+      >
         <div className="ml-[8%] mt-[3%] h-[50%] w-[40rem] rounded-md px-16 py-12">
           <h2 className="text-3xl font-bold text-orange-600">Sign Up</h2>
           <h3 className="text-[1.2rem] text-gray-700">
             Your Creativity Begins Now
           </h3>
-          <button className="my-5 w-full rounded-md border bg-white py-2 shadow-lg">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="my-5 w-full rounded-md border bg-white py-2 shadow-lg"
+          >
             Login with Google
-          </button>
+          </motion.button>
           <div className="flex items-center space-x-3">
             <hr className="flex-grow border-black opacity-20" />
             <h4>Or</h4>
@@ -77,7 +89,9 @@ const SignUpHero = () => {
                 </span>
               </h4>
             </div>
-            <input
+            <motion.input
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.9 }}
               type="button"
               className="mt-4 w-full rounded-md border bg-orange-200 bg-orange-600 py-[0.5rem] font-bold text-white shadow-xl"
               value="Sign Up"
@@ -85,16 +99,20 @@ const SignUpHero = () => {
           </form>
         </div>
 
-        <div className="flex min-h-screen w-[40%] flex-col items-center justify-center space-y-2 border bg-white shadow-xl">
+        <div className="bg-gradient-to-br from-orange-50 to-white flex min-h-[50vh] lg:min-h-screen w-full lg:w-[40%] flex-col items-center justify-center space-y-2 border shadow-xl p-4 lg:p-0">
           <h2 className="text-3xl font-bold">Hello Friend</h2>
           <h3 className="text-xl">
             Enter your personal detail and start journey with us
           </h3>
-          <button className="rounded-md bg-orange-600 px-10 py-2 text-2xl font-bold shadow-lg">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.9 }}
+            className="rounded-md bg-orange-600 px-10 py-2 text-2xl font-bold shadow-lg"
+          >
             Login
-          </button>
+          </motion.button>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 };
