@@ -65,7 +65,7 @@ export const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              to="/join-us"
+              to="/sign-up"
               className="rounded-full border-2 border-[#131842] bg-[#ecceae] px-6 py-2 font-bold text-[#131842] hover:bg-[#131842] hover:text-[#ecceae] transition-colors duration-300"
             >
               Join Us <ChevronRight className="inline-block ml-1" />
@@ -105,7 +105,7 @@ export const Header = () => {
               );
             })}
             <Link
-              to="/join-us"
+              to="/sign-up"
               className="mt-4 rounded-full border-2 border-[#131842] bg-[#ecceae] px-6 py-2 font-bold text-[#131842] text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >

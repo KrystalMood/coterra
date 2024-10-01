@@ -6,7 +6,7 @@ import { BlogPage } from "@/pages/blog";
 import { FAQPage } from "@/pages/faq";
 import { ServicesPage } from "@/pages/services";
 import { RegisterPage } from "@/pages/register";
-import { LoginPage } from "@/pages/login";
+import { SignUpPage } from "@/pages/sign-up";
 import { PlansPage } from "@/pages/plans";
 
 export const Router = () => {
@@ -21,7 +21,7 @@ export const Router = () => {
         <Route path="/services" Component={ServicesPage} />
         <Route path="/register" Component={RegisterPage} />
         <Route path="/plans" Component={PlansPage} />
-        <Route path="/login" Component={LoginPage} />
+        <Route path="/sign-up" Component={SignUpPage} />
       </Routes>
     </BrowserRouter>
   );

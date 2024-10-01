@@ -22,6 +22,7 @@
     "react-helmet-async": "^2.0.5",
     "react-parallax-tilt": "^1.7.239",
     "react-router-dom": "^6.26.2",
+    "react-scroll-parallax": "^3.4.5",
     "sass": "^1.78.0",
     "scss": "^0.2.4",
     "typed.js": "^2.1.0",

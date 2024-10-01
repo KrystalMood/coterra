@@ -6,5 +6,5 @@ import "./style.scss";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router />
-  </StrictMode>,
+  </StrictMode>
 );
