@@ -8,6 +8,7 @@ import { ServicesPage } from "@/pages/services";
 import { RegisterPage } from "@/pages/register";
 import { SignUpPage } from "@/pages/sign-up";
 import { PlansPage } from "@/pages/plans";
+import LoginPage from "@/pages/login";
 
 export const Router = () => {
   return (
@@ -22,6 +23,7 @@ export const Router = () => {
         <Route path="/register" Component={RegisterPage} />
         <Route path="/plans" Component={PlansPage} />
         <Route path="/sign-up" Component={SignUpPage} />
+        <Route path="login" Component={LoginPage} />
       </Routes>
     </BrowserRouter>
   );

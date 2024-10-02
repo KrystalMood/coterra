@@ -1,16 +1,17 @@
 import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-const SignUpHero = () => {
+import { useState } from "react";
+const LoginMain = () => {
   return (
-    <main className="min-h-screen relative bg-gradient-to-br from-orange-50 to-white">
+    <main className="relative min-h-screen bg-gradient-to-br from-orange-50 to-white">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0 }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute left-0 top-0 m-4 z-10"
+        className="absolute left-0 top-0 z-10 m-4"
       >
         <Link
           to="/"
@@ -23,12 +24,12 @@ const SignUpHero = () => {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
-        className="flex flex-col lg:flex-row justify-between "
+        className="flex flex-col justify-between lg:flex-row"
       >
         <div className="ml-[8%] mt-[3%] h-[50%] w-[40rem] rounded-md px-16 py-12">
-          <h2 className="text-3xl font-bold text-orange-600">Sign Up</h2>
+          <h2 className="text-3xl font-bold text-orange-600">Login</h2>
           <h3 className="text-[1.2rem] text-gray-700">
-            Your Creativity Begins Now
+            We are waiting for your infinite potential
           </h3>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -44,14 +45,7 @@ const SignUpHero = () => {
           </div>
           <form className="mt-4 flex flex-col space-y-4">
             <div>
-              <h2 className="text-[1rem]">Username</h2>
-              <input
-                type="text"
-                className="mt-1 w-full rounded-md border-2 py-[0.2rem]"
-              />
-            </div>
-            <div>
-              <h2 className="text-[1rem]">Email</h2>
+              <h2 className="text-[1rem]">Email / Username</h2>
               <input
                 type="text"
                 className="mt-1 w-full rounded-md border-2 py-[0.2rem]"
@@ -64,40 +58,22 @@ const SignUpHero = () => {
                 className="mt-1 w-full rounded-md border-2 py-[0.2rem]"
               />
             </div>
-            <div>
-              <h2 className="text-[1rem]">Confirm Password</h2>
-              <input
-                type="text"
-                className="mt-1 w-full rounded-md border-2 py-[0.2rem]"
-              />
-            </div>
-            <div className="mt-2 flex space-x-2">
-              <input
-                type="checkbox"
-                name=""
-                id=""
-                className="h-4 w-4 rounded focus:bg-orange-600"
-              />
-              <h4 className="text-[70%] font-thin">
-                I Agree to{" "}
-                <span className="text-orange-600 hover:underline">
-                  Terms of Service
-                </span>{" "}
-                and{" "}
-                <span className="text-orange-600 hover:underline">
-                  Privacy Policy
-                </span>
-              </h4>
-            </div>
             <motion.input
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
               type="button"
-              className="mt-4 w-full rounded-md border bg-orange-200 bg-orange-600 py-[0.5rem] font-bold text-white shadow-xl"
-              value="Sign Up"
+              className=" w-full rounded-md border bg-orange-200 bg-orange-600 py-[0.5rem] font-bold text-white shadow-xl"
+              value="Login"
             />
-            <h4 className="text-[80%]">Don't have an account? <Link to="/login" className="hover:text-orange-600 hover:underline">Login</Link></h4>
           </form>
+          <div className="mt-2">
+            <h4 className="text-[90%]">
+              Don't have an account?{" "}
+              <Link to="/sign-up" className="hover:text-orange-600 hover:underline">
+                Sign Up
+              </Link>
+            </h4>
+          </div>
         </div>
 
         <div className="flex min-h-[50vh] w-full flex-col items-center justify-center space-y-2 border p-4 shadow-xl lg:min-h-screen lg:w-[40%] lg:p-0">
@@ -112,4 +88,4 @@ const SignUpHero = () => {
   );
 };
 
-export default SignUpHero;
+export default LoginMain;
