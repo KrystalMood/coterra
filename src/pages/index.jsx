@@ -6,6 +6,7 @@ import { ShapeTheFuture } from "@/components/index/shape-the-future";
 import { Reviews } from "@/components/index/reviews";
 import { IndexFeatures } from "@/components/index/features";
 import Footer from "@/common/footer";
+import IndexShowcase from "@/components/index/showcase";
 
 export const IndexPage = () => {
   return (
@@ -14,6 +15,7 @@ export const IndexPage = () => {
       <ScrollIndicator />
       <Header />
       <IndexHero />
+      <IndexShowcase />
       <IndexFeatures />
       <ShapeTheFuture />
       <Reviews />

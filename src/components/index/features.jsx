@@ -1,64 +1,125 @@
-import { useState } from "react";
+import React, { useState, useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { Camera, Edit, Tv } from 'lucide-react';
 
 const featuresList = [
   {
-    title: "Features1",
-    subtitle: "lorem ipsum dolor sit amet",
-    picture: "/templategf1.jpeg",
+    title: "Create",
+    subtitle: "Unleash your creativity with easy-to-use tools",
+    icon: Camera,
+    color: "text-[#d16d53]",
+    image: "/templategf1.jpeg"
   },
   {
-    title: "Features2",
-    subtitle: "lorem ipsum dolor sit amet",
-    picture: "/templategf2.jpeg",
+    title: "Edit",
+    subtitle: "Polish your content to perfection",
+    icon: Edit,
+    color: "text-[#d16d53]",
+    image: "/templategf2.jpeg"
   },
   {
-    title: "Features3",
-    subtitle: "lorem ipsum dolor sit amet",
-    picture: "/templategf3.jpeg",
+    title: "Share",
+    subtitle: "Reach your audience instantly",
+    icon: Tv,
+    color: "text-[#d16d53]",
+    image: "/templategf3.jpeg"
   }
 ];
 
-const FeaturePosts = ({ list }) => {
+const FeatureCard = ({ feature, isHovered, onHover }) => {
+  const Icon = feature.icon;
   return (
-    <div className="shadow-xl h-[30rem] w-[30rem] rounded-xl ">
-      <figure className="">
-        <img src={list.picture} alt={list.title} className="rounded-t-xl min-h-[20rem] min-w-[20rem] object-cover" />
-      </figure>
-      <article className="flex">
-        <h3 className="text-xl mx-4 my-4 font-thin">{list.subtitle}</h3>
-      </article>
+    <div 
+      className="group relative h-[24rem] w-[20rem] cursor-pointer rounded-xl bg-white p-6 shadow-xl transition-all duration-300 hover:-translate-y-2"
+      onMouseEnter={() => onHover(true)}
+      onMouseLeave={() => onHover(false)}
+    >
+      <div className="absolute -top-8 left-1/2 -translate-x-1/2 transform">
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-orange-50 shadow-lg">
+          <Icon className={`h-8 w-8 ${feature.color}`} />
+        </div>
+      </div>
+      <div className="mt-12 text-center">
+        <h3 className="mb-2 text-2xl font-bold">{feature.title}</h3>
+        <p className="text-gray-600">{feature.subtitle}</p>
+      </div>
+      <div className="mt-6">
+        <div className="h-40 overflow-hidden rounded-lg bg-orange-50 p-4">
+          <div className={`transform transition-transform duration-500 ${isHovered ? 'scale-110' : 'scale-100'}`}>
+            <img 
+              src={feature.image} 
+              alt={feature.title}
+              className="rounded-lg object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
+
 export const IndexFeatures = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Scroll Animation
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.5, 1], [100, 0, 0]);
+
+  // Slide Functions
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % featuresList.length);
   };
+  
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + featuresList.length) % featuresList.length,
+      (prevIndex) => (prevIndex - 1 + featuresList.length) % featuresList.length
     );
   };
+
   return (
-    <main className="min-h-screen bg-orange-50">
-      <div className="mb-4 flex flex-col items-center pt-20">
-        <h2 className="text-5xl font-bold text-[#d16d53]">
-          Take a <span className="text-black">Peek</span>
+    <motion.main
+      ref={ref}
+      style={{ opacity, y }}
+      className="min-h-screen bg-orange-50 py-20"
+    >
+      <div className="mb-12 text-center">
+        <h2 className="mb-4 text-5xl font-bold">
+          <span className="text-[#d16d53]">Create</span>, Edit & 
+          <span className="relative inline-block px-2">
+            Share
+            <svg className="absolute -bottom-2 left-0 h-3 w-full text-[#d16d53]" viewBox="0 0 100 12">
+              <path d="M0,10 Q50,0 100,10" fill="none" stroke="currentColor" strokeWidth="4"/>
+            </svg>
+          </span>
         </h2>
-        <h3 className="text-3xl font-bold mb-4">
-          Get a glimpse into the
-          <span className="text-[#d16d53]"> creative</span> process.
-        </h3>
+        <p className="mx-auto max-w-2xl text-xl text-gray-600">
+          Your all-in-one platform for bringing your content dreams to life!
+        </p>
       </div>
-      <div className="mx-auto min-h-[30rem] w-3/4">
-        <figure className="flex gap-4">
-          {featuresList.map((list, index) => (
-            <FeaturePosts key={index} list={list} />
-          ))}
-        </figure>
+      
+      <div className="mx-auto flex max-w-6xl justify-center gap-8 px-4">
+        {featuresList.map((feature, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
+            <FeatureCard
+              feature={feature}
+              isHovered={hoveredIndex === index}
+              onHover={(hovered) => setHoveredIndex(hovered ? index : null)}
+            />
+          </motion.div>
+        ))}
       </div>
-    </main>
+    </motion.main>
   );
 };
