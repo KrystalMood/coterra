@@ -108,7 +108,7 @@ export const Reviews = () => {
       scrollTrigger: {
         trigger: section,
         start: "top bottom-=100",
-        end: "bottom center",
+        end: "bottom 90%",
         scrub: 1,
       }
     });

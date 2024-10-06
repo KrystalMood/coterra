@@ -22,7 +22,7 @@ export const ShapeTheFuture = () => {
       scrollTrigger: {
         trigger: section,
         start: "top bottom",
-        end: "bottom top",
+        end: "bottom 60%",
         scrub: 1,
       }
     });
