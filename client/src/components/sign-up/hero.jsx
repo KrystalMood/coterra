@@ -38,9 +38,9 @@ const SignUpHero = () => {
             Login with Google
           </motion.button>
           <div className="flex items-center space-x-3">
-            <hr className="flex-grow border-black opacity-20" />
+            <hr className="flex-grow border-orange-200 opacity-20" />
             <h4>Or</h4>
-            <hr className="flex-grow border-black opacity-20" />
+            <hr className="flex-grow border-orange-200 opacity-20" />
           </div>
           <form className="mt-4 flex flex-col space-y-4">
             <div>
@@ -80,11 +80,11 @@ const SignUpHero = () => {
               />
               <h4 className="text-[70%] font-thin">
                 I Agree to{" "}
-                <span className="text-orange-600 hover:underline">
+                <span className="cursor-pointer text-orange-600 hover:underline">
                   Terms of Service
                 </span>{" "}
                 and{" "}
-                <span className="text-orange-600 hover:underline">
+                <span className="cursor-pointer text-orange-600 hover:underline">
                   Privacy Policy
                 </span>
               </h4>
@@ -93,7 +93,7 @@ const SignUpHero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.9 }}
               type="button"
-              className="mt-4 w-full rounded-md border bg-orange-200 bg-orange-600 py-[0.5rem] font-bold text-white shadow-xl"
+              className="mt-4 w-full rounded-md border bg-orange-600 py-[0.5rem] font-bold text-white shadow-xl"
               value="Sign Up"
             />
             <h4 className="text-[80%]">Don't have an account? <Link to="/login" className="hover:text-orange-600 hover:underline">Login</Link></h4>

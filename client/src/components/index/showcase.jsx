@@ -37,14 +37,17 @@ const ShowcaseTab = ({ post, isActive, onHover }) => {
     <div
       onMouseEnter={onHover}
       className={`group relative flex flex-col overflow-hidden transition-all duration-300 ${
-        isActive ? 'scale-105' : ''
+        isActive ? "scale-105" : ""
       }`}
     >
       <div className="flex cursor-pointer items-center py-6">
-        <span className="absolute transform text-orange-500 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100" style={{ transform: 'translateX(-20px)' }}>
+        <span
+          className="absolute transform text-orange-500 opacity-0 transition-all duration-300 ease-out group-hover:translate-x-0 group-hover:opacity-100"
+          style={{ transform: "translateX(-20px)" }}
+        >
           {post.icon}
         </span>
-        <div className="flex flex-col transform transition-all duration-300 ease-out group-hover:translate-x-12">
+        <div className="flex transform flex-col transition-all duration-300 ease-out group-hover:translate-x-12">
           <h2 className="text-2xl font-semibold text-gray-800 transition-colors duration-300 group-hover:text-orange-500">
             {post.title}
           </h2>
@@ -98,10 +101,10 @@ const IndexShowcase = () => {
           y: 0,
           x: 0,
           opacity: 1,
-          duration: 3,
+          duration: 5,
           ease: "power2.out",
         },
-        0
+        0,
       );
 
     return () => {
@@ -111,7 +114,7 @@ const IndexShowcase = () => {
 
   useEffect(() => {
     const image = imageRef.current;
-    
+
     if (imageAnimationRef.current) {
       imageAnimationRef.current.kill();
     }
@@ -163,9 +166,8 @@ const IndexShowcase = () => {
           </article>
         </div>
       </div>
-      <div className="absolute bottom-0 right-0 overflow-hidden">
+      <div ref={imageRef} className="absolute bottom-0 right-0 overflow-hidden">
         <img
-          ref={imageRef}
           className="h-[90vh] w-[90vh] rounded-tl-3xl object-cover shadow-2xl outline outline-2 outline-orange-500/20 transition-all duration-500"
           src={showcaseContent[activeIndex].image}
           alt={showcaseContent[activeIndex].title}

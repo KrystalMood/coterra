@@ -62,7 +62,7 @@ export const IndexHero = ({ onGetStarted }) => {
             className="flex items-center gap-2 rounded-full bg-[#e68369] px-6 py-3 font-semibold text-white transition-all hover:bg-[#d77258]"
           >
             <PlayCircle size={20} />
-            Learn More
+            Start Your Journey
           </button>
         </motion.div>
 
